@@ -1,0 +1,18 @@
+[General]
+TZ = "Europe/Helsinki"
+
+[ClassDirs]
+dir[] = ${mosBASE}/util
+dir[] = ${mosBASE}/model
+dir[] = $(BASEPATH)/web/model
+dir[] = ${BASEPATH}/web/controller
+dir[] = ${BASEPATH}/web/view
+dir[] = ${BASEPATH}/web/vendor
+
+[Database]
+user = "***"
+password = "****"
+host = "localhost"
+port = "5432"
+name = "pehmobase"
+dsn = "pgsql:host=localhost;port=5432;dbname=pehmobase"
