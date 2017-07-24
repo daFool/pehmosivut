@@ -2,5 +2,6 @@
 <!-- Komodo Project File - DO NOT EDIT -->
 <project id="c9a2aa0a-9a12-4340-98c8-3583424cd811" kpf_version="5" name="pehmosivut.komodoproject">
 <preference-set idref="c9a2aa0a-9a12-4340-98c8-3583424cd811" id="project" preftype="project">
+  <long id="prefs_version">1</long>
 </preference-set>
 </project>

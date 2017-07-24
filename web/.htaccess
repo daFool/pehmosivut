@@ -1,0 +1,11 @@
+SetEnv mosBASE /home/mos/projektit/pehmosivut/mosBase
+SetEnv pehmoConfig /home/mos/projektit/pehmosivut/pehmot.ini
+SetEnv BASEPATH /home/mos/projektit/pehmosivut
+SetEnv BASEURL http://localhost/pehmosivut
+
+RewriteEngine On
+RewriteBase /kissat/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule .* index.php [L,QSA]

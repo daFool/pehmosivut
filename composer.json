@@ -1,0 +1,10 @@
+{
+    "config": {
+	"vendor-dir": "web/vendor"
+    },
+    "require": {
+        "bcosca/fatfree-core": "^3.6",
+        "twig/twig": "^2.3",
+        "google/apiclient": "^2.1"
+    }
+}

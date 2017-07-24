@@ -10,6 +10,7 @@ create table pehmologi (
         longtitude      float,
         edellinen_id    int,
         linkki          text,
+        koodi           varchar(40),
         like pohjat INCLUDING ALL );
 
 comment on table pehmologi is 'Pehmojen päiväkirja, missä pehmo on mennyt ja mitä puuhannut';

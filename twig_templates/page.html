@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html lang="fi">
+        <head>
+            {% block head %}
+            {{ include ("ScriptsAndStyles.html") }}
+            {% endblock%}
+        </head>
+        <body>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">{{ ShowNav }}</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">{{ Pehmosivut }}</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{{ baseurl }}/index.php">{{ Etusivu }}</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Nallet }}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    {% for nalle in nallet %}
+                                        <li><a href="{{ nalle.url }}">{{ nalle.teksti }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Nallet }}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    {% for kissa in kissat %}
+                                        <li><a href="{{ kissa.url }}">{{ kissa.teksti }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Kieli }}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    {% for kieli in kielet %}
+                                        <li><a href="{{ kieli.url }}">{{ kieli.teksti }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="container">
+                {% block content %}
+                {% endblock %}
+            </section>
+            <footer class="slsfooter">
+                 <div class="container-fluid">
+                    <p class="text-muted">                        
+                    </p>
+                </div>
+            </footer>
+        </body>
+    </html>
