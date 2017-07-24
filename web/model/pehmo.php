@@ -10,17 +10,17 @@ class pehmo extends mosBase\malli {
     
     public function nallet() {
         $s = "select nimi from pehmo where nimi like '%Ropenalle%';";
-        $st = $this->pdoPrepare($s, $this->pdo);
+        $st = $this->pdoPrepare($s, $this->db);
         $this->pdoExecute($st, array());
-        $nallet = $this->fetchAll(\PDO::FETCHASSOC);
+        $nallet = $st->fetchAll(\PDO::FETCH_ASSOC);
         return $nallet;
     }
     
     public function kissat() {
         $s = "select nimi from pehmo where nimi not like '%Ropenalle%';";
-        $st = $this->pdoPrepare($s, $this->pdo);
+        $st = $this->pdoPrepare($s, $this->db);
         $this->pdoExecute($st, array());
-        $kissat = $this->fetchAll(\PDO::FETCHASSOC);
+        $kissat = $st->fetchAll(\PDO::FETCH_ASSOC);
         return $kissat;
     }
 }

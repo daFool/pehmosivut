@@ -37,7 +37,7 @@ class vPage {
         $ki = $pehmot->kissat();
         foreach($ki as $kisuli) {
             $k[$i]["teksti"]=$kisuli["nimi"];
-            $k[$i++]["url"]=sprintf("$baseurl/kissat?kissa=%s", $nallukka["nimi"]);
+            $k[$i++]["url"]=sprintf("$baseurl/kissat?kissa=%s", $kisuli["nimi"]);
         }
         
         $l = array("0"=>array("url"=>"$baseurl/controller/kieli?kieli=englanti", "teksti"=>$t["englanti"]),
